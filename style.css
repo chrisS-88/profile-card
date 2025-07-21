@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+  color: var(--text);
+}
+
+:root {
+  --bg-colour: #f5f7f8;
+  --primary-colour: #f78355;
+  --secondary-colour: #495e57;
+  --text: #45474b;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-colour);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 550px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 6px 6px 8px 1px rgb(164, 164, 164);
+}
+
+.card .img-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--primary-colour);
+  border-radius: 1rem 0 0 1rem;
+  z-index: 100;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-colour);
+}
+
+.card .img-section p {
+  background-color: var(--secondary-colour);
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  color: white;
+}
+
+.card .bio-section {
+  width: 62%;
+  margin-left: 38%;
+  position: relative;
+}
+
+.card .bio-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 3rem;
+  z-index: 100;
+}
+
+.card .bio-section p {
+  padding: 6.5rem 1.5rem;
+  line-height: 1.4rem;
+}
+
+.card .bio-section span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+}
+
+/* transition div */
+.card .more-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  left: 38%;
+  width: 62%;
+  height: 100%;
+  background-color: var(--primary-colour);
+  transform: translateX(-100%);
+  transition: all ease-in-out 0.3s;
+  padding-top: 6rem;
+}
+
+.card .more-info .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}
+
+.card .more-info .contact h3 {
+  font-size: 1rem;
+}
+
+.card .more-info ul {
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .more-info .socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card .more-info .socials i {
+  color: var(--secondary-colour);
+  font-size: 2rem;
+}
+
+/* hover effect */
+.card:hover {
+  .more-info {
+    transform: translateX(0);
+  }
+  .img-section {
+    border-right: dashed 0.5px white;
+  }
+  i:hover {
+    color: var(--bg-colour);
+  }
+}
