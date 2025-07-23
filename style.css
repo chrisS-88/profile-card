@@ -7,7 +7,7 @@
 }
 
 :root {
-  --bg-colour: #f5f7f8;
+  --bg-colour: #dedbd2;
   --primary-colour: #f78355;
   --secondary-colour: #495e57;
   --text: #45474b;
@@ -34,7 +34,7 @@ li {
   background-color: white;
   display: flex;
   border-radius: 1rem;
-  box-shadow: 6px 6px 8px 1px rgb(164, 164, 164);
+  box-shadow: 6px 6px 8px 1px rgb(66, 66, 66);
 }
 
 .card .img-section {
